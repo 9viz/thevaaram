@@ -1,0 +1,13 @@
+babel\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+
+\babelprovide[import]{tamil}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\babelfont{rm}[Scale=1.0]{Latin Modern Roman}
+\babelfont[tamil]{rm}{Kurinto Seri}
+
+\begin{document}
+\foreignlanguage{tamil}{தமிழ் அரிச்சுவடி-தமிழ் மொழி}
+\end{document}
