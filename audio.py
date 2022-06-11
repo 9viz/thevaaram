@@ -22,7 +22,7 @@ def post(id):
             headers=UA,
         )).read().decode("utf8")
 
-def padigangal(url):
+def padigamgal(url):
     soup = bs4.BeautifulSoup(request(url), "html.parser")
     ret = []
     xs = soup.find("ul", class_="sub-page-list").find_all("li")
@@ -45,5 +45,5 @@ def audio(padigam):
 
 if __name__ == "__main__":
     for i in argv[1:]:
-        for padigam, n in padigangal(i):
+        for padigam, n in padigamgal(i):
             print("wget {} -O {}.mp3".format(shell_quote(audio(padigam)), shell_quote(n)))
